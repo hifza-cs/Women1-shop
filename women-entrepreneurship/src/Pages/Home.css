@@ -1,0 +1,99 @@
+
+.home-hero {
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Overlay for contrast */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+/* Centered text with animation */
+.hero-text {
+  max-width: 800px;
+  color: #fff;
+  text-align: center;
+  z-index: 1;
+  animation: fadeSlideUp 1.5s ease-out forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.hero-text h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Button styling */
+.shop-now-btn {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 14px 30px;
+  font-size: 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-weight: 500;
+}
+
+.shop-now-btn:hover {
+  background-color: #f7e7ff;
+  color: #000;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+/* Animation for entrance */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 28px;
+  }
+  .hero-text p {
+    font-size: 16px;
+  }
+  .shop-now-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+}
